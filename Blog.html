@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Musings | A Blog About Life & Creativity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .post-card:hover .post-title {
+            color: #3b82f6;
+        }
+        .post-card:hover img {
+            transform: scale(1.03);
+        }
+        .category-chip:hover {
+            background-color: #e0e7ff;
+            color: #3b82f6;
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800">Branding Agency</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="about.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Mindful Musings Blog</h1>
+                <p class="text-xl max-w-2xl mx-auto opacity-90">Thoughts on mindfulness, creativity, and living with intention in a busy world.</p>
+                <div class="mt-8">
+                    <div class="relative max-w-md mx-auto">
+                        <input type="text" placeholder="Search articles..." class="w-full px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-400 text-gray-800">
+                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition duration-300">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Blog Posts Section -->
+            <div class="lg:w-2/3">
+                <!-- Featured Post -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <span class="w-6 h-6 rounded-full bg-indigo-600 mr-3"></span>
+                        Featured Post
+                    </h2>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="md:flex">
+                            <div class="md:flex-shrink-0 md:w-1/3 overflow-hidden">
+                                <img class="h-full w-full object-cover transition duration-500" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Featured post">
+                            </div>
+                            <div class="p-8 md:w-2/3">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-sm text-indigo-600 font-semibold">MINDFULNESS</span>
+                                    <span class="mx-2 text-gray-400">•</span>
+                                    <span class="text-sm text-gray-500">June 12, 2023</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3 post-title transition duration-300">The Art of Being Present: How to Cultivate Mindfulness Daily</h3>
+                                <p class="text-gray-600 mb-4">Discover practical techniques to bring mindfulness into your everyday routine and transform your relationship with the present moment...</p>
+                                <div class="flex items-center">
+                                    <img class="h-10 w-10 rounded-full mr-3" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                                    <div>
+                                        <p class="text-sm font-medium">Sarah Johnson</p>
+                                        <p class="text-xs text-gray-500">Mindfulness Coach</p>
+                                    </div>
+                                    <a href="blog post.html" class="ml-auto text-indigo-600 hover:text-indigo-800 font-medium animated-underline">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Posts -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <span class="w-6 h-6 rounded-full bg-indigo-600 mr-3"></span>
+                        Latest Articles
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Post 1 -->
+                        <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img class="h-full w-full object-cover transition duration-500" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1399&q=80" alt="Post thumbnail">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-xs text-indigo-600 font-semibold">CREATIVITY</span>
+                                    <span class="mx-2 text-gray-400">•</span>
+                                    <span class="text-xs text-gray-500">June 8, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 post-title transition duration-300">Unlocking Your Creative Potential: 5 Unexpected Methods</h3>
+                                <p class="text-gray-600 text-sm mb-4">Explore unconventional approaches to spark creativity and overcome blocks in your artistic practice...</p>
+                                <a href="blog post.html" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium animated-underline">Read More</a>
+                            </div>
+                        </div>
+
+                        <!-- Post 2 -->
+                        <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img class="h-full w-full object-cover transition duration-500" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Post thumbnail">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-xs text-indigo-600 font-semibold">WELLNESS</span>
+                                    <span class="mx-2 text-gray-400">•</span>
+                                    <span class="text-xs text-gray-500">June 5, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 post-title transition duration-300">Digital Detox: Reclaiming Your Attention in the Age of Distraction</h3>
+                                <p class="text-gray-600 text-sm mb-4">A practical guide to reducing screen time and creating healthier relationships with technology...</p>
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium animated-underline">Read More</a>
+                            </div>
+                        </div>
+
+                        <!-- Post 3 -->
+                        <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img class="h-full w-full object-cover transition duration-500" src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Post thumbnail">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-xs text-indigo-600 font-semibold">PRODUCTIVITY</span>
+                                    <span class="mx-2 text-gray-400">•</span>
+                                    <span class="text-xs text-gray-500">May 29, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 post-title transition duration-300">The Myth of Multitasking: Why Focus is Your Superpower</h3>
+                                <p class="text-gray-600 text-sm mb-4">Science-backed insights on how single-tasking can dramatically improve your efficiency and mental clarity...</p>
+                                <a href="blog post.html" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium animated-underline">Read More</a>
+                            </div>
+                        </div>
+
+                        <!-- Post 4 -->
+                        <div class="post-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <div class="h-48 overflow-hidden">
+                                <img class="h-full w-full object-cover transition duration-500" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Post thumbnail">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span class="text-xs text-indigo-600 font-semibold">LIFESTYLE</span>
+                                    <span class="mx-2 text-gray-400">•</span>
+                                    <span class="text-xs text-gray-500">May 22, 2023</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 post-title transition duration-300">Slow Living in a Fast World: Finding Balance in Modern Life</h3>
+                                <p class="text-gray-600 text-sm mb-4">How embracing a slower pace can lead to greater fulfillment and reduced stress...</p>
+                                <a href="blog post.html" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium animated-underline">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="flex items-center space-x-2">
+                            <a href="#" class="px-4 py-2 border rounded-lg text-gray-500 hover:bg-gray-100">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="px-4 py-2 border rounded-lg bg-indigo-600 text-white">1</a>
+                            <a href="#" class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-100">2</a>
+                            <a href="#" class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-100">3</a>
+                            <span class="px-2 text-gray-500">...</span>
+                            <a href="#" class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-100">8</a>
+                            <a href="#" class="px-4 py-2 border rounded-lg text-gray-500 hover:bg-gray-100">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 space-y-8">
+                <!-- About Widget -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-user-circle text-indigo-600 mr-2"></i>
+                        About The Blog
+                    </h3>
+                    <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="About image" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-4">Mindful Musings is a space dedicated to exploring mindfulness, creativity, and intentional living in our fast-paced world.</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium animated-underline">Read More</a>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-folder-open text-indigo-600 mr-2"></i>
+                        Categories
+                    </h3>
+                    <div class="space-y-2">
+                        <a href="#" class="category-chip block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                            <span class="text-indigo-600 mr-2">•</span> Mindfulness (12)
+                        </a>
+                        <a href="#" class="category-chip block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                            <span class="text-indigo-600 mr-2">•</span> Creativity (8)
+                        </a>
+                        <a href="#" class="category-chip block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                            <span class="text-indigo-600 mr-2">•</span> Productivity (15)
+                        </a>
+                        <a href="#" class="category-chip block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                            <span class="text-indigo-600 mr-2">•</span> Wellness (9)
+                        </a>
+                        <a href="#" class="category-chip block px-3 py-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                            <span class="text-indigo-600 mr-2">•</span> Lifestyle (7)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular Posts -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-fire text-indigo-600 mr-2"></i>
+                        Popular Posts
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <img class="h-16 w-16 rounded-lg object-cover" src="https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Popular post">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 hover:text-indigo-600 transition duration-300">
+                                    <a href="#">Morning Rituals for a Productive Day</a>
+                                </h4>
+                                <p class="text-sm text-gray-500">May 15, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <img class="h-16 w-16 rounded-lg object-cover" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Popular post">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 hover:text-indigo-600 transition duration-300">
+                                    <a href="#">The Science of Habit Formation</a>
+                                </h4>
+                                <p class="text-sm text-gray-500">April 28, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <img class="h-16 w-16 rounded-lg object-cover" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Popular post">
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900 hover:text-indigo-600 transition duration-300">
+                                    <a href="#">Finding Flow in Your Creative Work</a>
+                                </h4>
+                                <p class="text-sm text-gray-500">April 10, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-envelope text-indigo-600 mr-2"></i>
+                        Newsletter
+                    </h3>
+                    <p class="text-gray-600 mb-4">Subscribe to get our latest articles and mindfulness tips delivered to your inbox.</p>
+                    <form class="space-y-3">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+                        <button type="submit" class="w-full gradient-bg text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition duration-300">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Tags -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-tags text-indigo-600 mr-2"></i>
+                        Tags
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">meditation</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">journaling</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">focus</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">habits</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">self-care</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">writing</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">art</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-indigo-100 hover:text-indigo-700 transition duration-300">balance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Featured Quote -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <blockquote class="text-xl md:text-2xl italic mb-6">
+                "Mindfulness isn't difficult, we just need to remember to do it."
+            </blockquote>
+            <p class="font-medium">— Sharon Salzberg</p>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Follow Us on Instagram</h2>
+            <p class="max-w-2xl mx-auto text-gray-600">Daily inspiration and behind-the-scenes moments.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+            <a href="#" class="overflow-hidden rounded-lg hover:opacity-90 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Instagram post" class="w-full h-40 object-cover hover:scale-105 transition duration-500">
+            </a>
+            <a href="#" class="overflow-hidden rounded-lg hover:opacity-90 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Instagram post" class="w-full h-40 object-cover hover:scale-105 transition duration-500">
+            </a>
+            <a href="#" class="overflow-hidden rounded-lg hover:opacity-90 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1399&q=80" alt="Instagram post" class="w-full h-40 object-cover hover:scale-105 transition duration-500">
+            </a>
+            <a href="#" class="overflow-hidden rounded-lg hover:opacity-90 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Instagram post" class="w-full h-40 object-cover hover:scale-105 transition duration-500">
+            </a>
+            <a href="#" class="overflow-hidden rounded-lg hover:opacity-90 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Instagram post" class="w-full h-40 object-cover hover:scale-105 transition duration-500">
+            </a>
+            <a href="#" class="overflow-hidden rounded-lg hover:opacity-90 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Instagram post" class="w-full h-40 object-cover hover:scale-105 transition duration-500">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Mindful Musings</h3>
+                    <p class="text-gray-400 mb-4">Exploring mindfulness, creativity, and intentional living in our fast-paced world.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mindfulness</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Creativity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Productivity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Wellness</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Lifestyle</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get our latest articles and mindfulness tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="gradient-bg px-4 py-2 rounded-r-lg hover:opacity-90 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Mindful Musings. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for elements when they come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.post-card, .bg-white');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        };
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+            
+            // Mobile menu toggle would go here
+            // const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            // const mobileMenu = document.querySelector('.mobile-menu');
+            // mobileMenuButton.addEventListener('click', () => {
+            //     mobileMenu.classList.toggle('hidden');
+            // });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

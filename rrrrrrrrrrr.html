@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Nexus Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .process-step:hover .step-icon {
+            transform: rotateY(180deg);
+            background: #667eea;
+            color: white;
+        }
+        .step-icon {
+            transition: all 0.5s ease;
+        }
+        .tab-active {
+            background: #667eea;
+            color: white;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600">Nexus<span class="text-gray-800">Digital</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="services.html" class="text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="about.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Expert <span class="text-yellow-300">SEO Services</span> That Drive Results</h1>
+                    <p class="text-xl mb-8 opacity-90">We help businesses increase organic traffic, improve search rankings, and generate more leads through proven SEO strategies.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-indigo-600 px-6 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition duration-300">
+                            Get Free Audit
+                        </button>
+                        <button class="border-2 border-white text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="SEO Analysis" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="bg-gray-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 mb-8">Trusted by innovative companies worldwide</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
+                <img src="https://via.placeholder.com/150x60?text=Company+1" alt="Company Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60?text=Company+2" alt="Company Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60?text=Company+3" alt="Company Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60?text=Company+4" alt="Company Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+                <img src="https://via.placeholder.com/150x60?text=Company+5" alt="Company Logo" class="h-12 opacity-70 hover:opacity-100 transition duration-300 mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our SEO Services -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-semibold">OUR SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Comprehensive <span class="animated-underline">SEO Solutions</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">We offer a full spectrum of SEO services designed to improve your search visibility and drive qualified traffic to your website.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-8">
+                        <div class="gradient-bg inline-flex p-3 rounded-lg text-white mb-4">
+                            <i class="fas fa-search text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Keyword Research</h3>
+                        <p class="text-gray-600 mb-4">We identify the most valuable keywords for your business that will drive targeted traffic and conversions.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Comprehensive keyword analysis</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Competitor keyword research</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Long-tail keyword strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-8">
+                        <div class="gradient-bg inline-flex p-3 rounded-lg text-white mb-4">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">On-Page Optimization</h3>
+                        <p class="text-gray-600 mb-4">We optimize every element of your website to improve search rankings and user experience.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Content optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Meta tags & schema markup</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Internal linking strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-8">
+                        <div class="gradient-bg inline-flex p-3 rounded-lg text-white mb-4">
+                            <i class="fas fa-link text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Link Building</h3>
+                        <p class="text-gray-600 mb-4">We build high-quality backlinks from authoritative websites to boost your domain authority.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Guest posting outreach</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Broken link building</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> PR & media placements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-8">
+                        <div class="gradient-bg inline-flex p-3 rounded-lg text-white mb-4">
+                            <i class="fas fa-chart-bar text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Technical SEO</h3>
+                        <p class="text-gray-600 mb-4">We fix technical issues that prevent search engines from properly crawling and indexing your site.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Site speed optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Mobile-friendliness audit</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Structured data implementation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-8">
+                        <div class="gradient-bg inline-flex p-3 rounded-lg text-white mb-4">
+                            <i class="fas fa-shopping-cart text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">E-commerce SEO</h3>
+                        <p class="text-gray-600 mb-4">Specialized SEO strategies for online stores to increase product visibility and sales.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Product page optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Category structure improvement</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Shopping feed optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="p-8">
+                        <div class="gradient-bg inline-flex p-3 rounded-lg text-white mb-4">
+                            <i class="fas fa-map-marker-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Local SEO</h3>
+                        <p class="text-gray-600 mb-4">We help local businesses appear in the "Map Pack" and local search results.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Google My Business optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Local citation building</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Review management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-semibold">OUR PROCESS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Our <span class="animated-underline">SEO Methodology</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">A proven 4-step process that delivers measurable results for your business.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Discovery & Audit</h3>
+                    <p class="text-gray-600">We analyze your current SEO performance, identify opportunities, and develop a customized strategy.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Implementation</h3>
+                    <p class="text-gray-600">Our team executes the strategy with technical optimizations, content creation, and link building.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Monitoring</h3>
+                    <p class="text-gray-600">We track performance metrics, rankings, and traffic to measure progress and identify new opportunities.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-2xl font-bold">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reporting & Refinement</h3>
+                    <p class="text-gray-600">Monthly reports with actionable insights and continuous optimization to improve results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <span class="text-indigo-600 font-semibold">OUR RESULTS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Proven SEO <span class="animated-underline">Success Stories</span></h2>
+                    <p class="text-gray-600 mb-8">We've helped businesses across industries achieve remarkable growth through strategic SEO.</p>
+                    
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-4xl font-bold text-indigo-600 mb-2">+350%</h3>
+                            <p class="text-gray-600">Organic Traffic Increase</p>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-bold text-indigo-600 mb-2">+200%</h3>
+                            <p class="text-gray-600">Lead Generation Growth</p>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-bold text-indigo-600 mb-2">95%</h3>
+                            <p class="text-gray-600">Client Retention Rate</p>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl font-bold text-indigo-600 mb-2">#1</h3>
+                            <p class="text-gray-600">For Competitive Keywords</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 border-b border-gray-200">
+                            <div class="flex space-x-4">
+                                <button onclick="switchTab('tab1')" class="tab-button font-medium text-indigo-600 border-b-2 border-indigo-600 pb-2 px-1">Case Study 1</button>
+                                <button onclick="switchTab('tab2')" class="tab-button font-medium text-gray-500 hover:text-gray-700 pb-2 px-1">Case Study 2</button>
+                                <button onclick="switchTab('tab3')" class="tab-button font-medium text-gray-500 hover:text-gray-700 pb-2 px-1">Case Study 3</button>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div id="tab1" class="tab-content active">
+                                <h3 class="text-xl font-bold mb-3">E-commerce Fashion Brand</h3>
+                                <p class="text-gray-600 mb-4">Increased organic traffic by 420% and revenue by 300% in 8 months through comprehensive product page optimization and content marketing strategy.</p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-1/2 font-medium">Keyword Rankings</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-2">+32</span>
+                                                <span>New top 3 rankings</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-1/2 font-medium">Organic Traffic</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-2">420%</span>
+                                                <span>Increase</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-1/2 font-medium">Conversion Rate</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-2">2.5x</span>
+                                                <span>Improvement</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab2" class="tab-content">
+                                <h3 class="text-xl font-bold mb-3">B2B SaaS Company</h3>
+                                <p class="text-gray-600 mb-4">Grew organic signups by 280% in 6 months through targeted content marketing and technical SEO improvements.</p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-1/2 font-medium">Organic Leads</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-2">280%</span>
+                                                <span>Increase</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-1/2 font-medium">Content Production</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center mr-2">18</span>
+                                                <span>Pillar pages created</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-1/2 font-medium">Domain Authority</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-purple-100 text-purple-800 rounded-full flex items-center justify-center mr-2">+15</span>
+                                                <span>Points gained</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab3" class="tab-content">
+                                <h3 class="text-xl font-bold mb-3">Local Service Business</h3>
+                                <p class="text-gray-600 mb-4">Achieved #1 rankings for 15 local keywords and increased calls by 190% through hyper-local SEO strategy.</p>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-1/2 font-medium">Local Rankings</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-2">15</span>
+                                                <span>#1 positions</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mb-2">
+                                        <div class="w-1/2 font-medium">Phone Calls</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-green-100 text-green-800 rounded-full flex items-center justify-center mr-2">190%</span>
+                                                <span>Increase</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-1/2 font-medium">Google Reviews</div>
+                                        <div class="w-1/2">
+                                            <div class="flex items-center">
+                                                <span class="w-8 h-8 bg-yellow-100 text-yellow-800 rounded-full flex items-center justify-center mr-2">4.9</span>
+                                                <span>Average rating</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-semibold">PRICING</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Flexible <span class="animated-underline">SEO Packages</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Choose the plan that fits your business needs and budget.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8 border-b border-gray-200">
+                        <h3 class="text-xl font-bold mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-6">Perfect for small businesses getting started with SEO</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$799</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <button class="w-full border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md text-lg font-semibold hover:bg-indigo-600 hover:text-white transition duration-300">
+                            Get Started
+                        </button>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Keyword Research (15 keywords)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> On-Page Optimization (10 pages)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Technical SEO Audit</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Monthly Performance Report</li>
+                            <li class="flex items-center text-gray-400"><i class="fas fa-times mr-3"></i> <span class="line-through">Content Creation</span></li>
+                            <li class="flex items-center text-gray-400"><i class="fas fa-times mr-3"></i> <span class="line-through">Link Building</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 relative">
+                    <div class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">MOST POPULAR</div>
+                    <div class="p-8 border-b border-gray-200">
+                        <h3 class="text-xl font-bold mb-2">Growth</h3>
+                        <p class="text-gray-600 mb-6">Ideal for businesses looking to scale their online presence</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$1,499</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <button class="w-full gradient-bg text-white px-6 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300">
+                            Get Started
+                        </button>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Keyword Research (30 keywords)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> On-Page Optimization (25 pages)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Comprehensive Technical SEO</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Detailed Monthly Reports</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Content Creation (2 articles/month)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Basic Link Building (5 links/month)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8 border-b border-gray-200">
+                        <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">For businesses needing maximum visibility and growth</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$2,999</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <button class="w-full border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md text-lg font-semibold hover:bg-indigo-600 hover:text-white transition duration-300">
+                            Get Started
+                        </button>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Comprehensive Keyword Strategy</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Full Website Optimization</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Advanced Technical SEO</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Custom Analytics Dashboard</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Premium Content Creation (8 articles/month)</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3"></i> Aggressive Link Building (15 links/month)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Need something custom? We've got you covered.</p>
+                <button class="gradient-bg text-white px-6 py-3 rounded-md text-lg font-semibold hover:opacity-90 transition duration-300">
+                    Request Custom Proposal
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-semibold">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Frequently Asked <span class="animated-underline">Questions</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Find answers to common questions about our SEO services.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ('faq1')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium">How long does it take to see results from SEO?</h3>
+                            <i id="faq1-icon" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq1-content" class="hidden px-6 pb-6 pt-0">
+                            <p class="text-gray-600">SEO is a long-term strategy, and results typically begin to appear within 3-6 months. However, this timeline can vary based on factors like your industry's competitiveness, the current state of your website, and the SEO strategies implemented. We usually see initial improvements in rankings within the first 2-3 months, with significant traffic growth occurring between months 4-6.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ('faq2')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium">What makes your SEO services different?</h3>
+                            <i id="faq2-icon" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq2-content" class="hidden px-6 pb-6 pt-0">
+                            <p class="text-gray-600 mb-3">Our approach combines three key differentiators:</p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li><strong>Data-Driven Strategies:</strong> We use advanced analytics to inform every decision and continuously optimize based on performance data.</li>
+                                <li><strong>Holistic Approach:</strong> We don't just focus on rankings, but on driving qualified traffic that converts into customers.</li>
+                                <li><strong>Transparent Reporting:</strong> You'll have access to detailed monthly reports and a dashboard showing exactly how your investment is performing.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ('faq3')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium">Do you guarantee #1 rankings?</h3>
+                            <i id="faq3-icon" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq3-content" class="hidden px-6 pb-6 pt-0">
+                            <p class="text-gray-600">No ethical SEO company can guarantee specific rankings because search algorithms constantly change and rankings depend on many factors outside our control, including competitors' activities. Instead, we focus on measurable improvements in organic traffic, conversions, and revenue. Our clients typically see significant ranking improvements for their target keywords, with many achieving top positions, but we emphasize sustainable growth over chasing specific ranking numbers.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ('faq4')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium">How do you handle link building?</h3>
+                            <i id="faq4-icon" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq4-content" class="hidden px-6 pb-6 pt-0">
+                            <p class="text-gray-600 mb-3">We follow white-hat link building practices that comply with Google's guidelines:</p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li><strong>Quality Over Quantity:</strong> We focus on earning links from authoritative, relevant websites in your industry.</li>
+                                <li><strong>Diverse Strategies:</strong> Our methods include guest posting, resource link building, digital PR, and creating link-worthy content.</li>
+                                <li><strong>Natural Profile:</strong> We ensure your backlink profile grows naturally with a mix of link types and anchor texts.</li>
+                                <li><strong>Transparency:</strong> You'll receive a report of all links acquired each month.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFAQ('faq5')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium">What's included in the monthly reports?</h3>
+                            <i id="faq5-icon" class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq5-content" class="hidden px-6 pb-6 pt-0">
+                            <p class="text-gray-600 mb-3">Our comprehensive monthly reports include:</p>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li>Keyword ranking progress (positions gained/lost)</li>
+                                <li>Organic traffic growth and trends</li>
+                                <li>Backlinks acquired and lost</li>
+                                <li>Technical SEO health check</li>
+                                <li>Content performance analysis</li>
+                                <li>Conversion metrics (leads, sales, etc.)</li>
+                                <li>Competitor benchmarking</li>
+                                <li>Work completed during the month</li>
+                                <li>Next month's action plan</li>
+                            </ul>
+                            <p class="mt-3 text-gray-600">You'll also have access to a real-time dashboard where you can monitor performance anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Grow Your Business with <span class="text-yellow-300">SEO?</span></h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">Get a free SEO audit and consultation to discover how we can help you achieve your business goals.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white text-indigo-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    Request Free Audit
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
+                    Speak With an Expert
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">SEO Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">PPC Advertising</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Content Marketing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">SEO Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Webinars</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">123 Business Ave</li>
+                        <li class="text-gray-400">New York, NY 10001</li>
+                        <li class="text-gray-400">(555) 123-4567</li>
+                        <li class="text-gray-400">info@digitalagency.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-chart-line text-indigo-500 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold">DigitalAgency</span>
+                </div>
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2023 DigitalAgency. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+            
+            // Update tab button styles
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('text-indigo-600', 'border-b-2', 'border-indigo-600');
+                button.classList.add('text-gray-500', 'hover:text-gray-700');
+            });
+            
+            // Style the clicked button (simulated in this example)
+            // In a real implementation, you would need to track which button was clicked
+        }
+
+        // FAQ toggle functionality
+        function toggleFAQ(faqId) {
+            const content = document.getElementById(faqId + '-content');
+            const icon = document.getElementById(faqId + '-icon');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+    </script>
+</body>
+</html>
