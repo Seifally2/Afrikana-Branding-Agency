@@ -53,37 +53,60 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800">Branding Agency</span></a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
-                    <a href="services.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
-                    <a href="portfolio.html" class="text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
-                    <a href="about.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
-                    <a href="contact.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
-                </div>
-                <div class="hidden md:block">
-                    <a href="#" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
-                </div>
-                <div class="md:hidden">
-                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+<!-- Navigation -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800">Branding Agency</span></a>
             </div>
-                <div class="md:hidden">
-                    <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-indigo-600 px-3 py-2 font-medium">Home</a>
+                <a href="About Us.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                <a href="Services.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+                <a href="portfolio.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                <a href="Contact Us.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                <a href="Blog.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Blog</a>
+            </div>
+
+            <!-- Desktop Booking Button -->
+            <div class="hidden md:block">
+                <a href="Booking Form.html" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </div>
-    </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+            <a href="index.html" class="block text-indigo-600 px-3 py-2 font-medium">Home</a>
+            <a href="About Us.html" class="block text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+            <a href="Services.html" class="block text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+            <a href="portfolio.html" class="block text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+            <a href="Contact Us.html" class="block text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+            <a href="Blog.html" class="block text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Blog</a>
+            <a href="Booking Form.html" class="block gradient-bg text-white text-center px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Toggle Script -->
+<script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
     <!-- Blog Header -->
     <header class="bg-gradient-to-r from-blue-50 to-purple-50 py-16">
