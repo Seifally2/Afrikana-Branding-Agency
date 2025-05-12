@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Development | Nexus Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .app-card:hover .app-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .app-overlay {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        .tech-badge {
+            transition: all 0.3s ease;
+        }
+        .tech-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .mobile-mockup {
+            position: relative;
+            width: 280px;
+            height: 560px;
+            border-radius: 40px;
+            background: #111;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .mobile-mockup::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 20px;
+            background: #111;
+            border-radius: 10px;
+            z-index: 10;
+        }
+        .mobile-mockup::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: #333;
+            border-radius: 2px;
+        }
+        .mobile-screen {
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800">Branding Agency</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="about.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Mobile App Development</h1>
+                    <p class="text-xl mb-8 text-blue-100 max-w-lg">Transform your ideas into powerful mobile experiences with our custom app development services.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Get a Quote
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            View Apps
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative flex justify-center">
+                    <div class="mobile-mockup animate-float">
+                        <div class="mobile-screen">
+                            <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Mobile App" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold">OUR EXPERTISE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Mobile Development Solutions</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">We build high-performance mobile applications for iOS and Android platforms using modern technologies and best practices.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fab fa-apple text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">iOS App Development</h3>
+                    <p class="text-gray-600">Native iOS apps built with Swift and SwiftUI, optimized for all Apple devices including iPhone, iPad, and Apple Watch.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fab fa-android text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Android App Development</h3>
+                    <p class="text-gray-600">Native Android applications developed with Kotlin and Jetpack Compose, ensuring optimal performance across devices.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cross-Platform Apps</h3>
+                    <p class="text-gray-600">Single codebase solutions with Flutter and React Native that work seamlessly on both iOS and Android platforms.</p>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-4">Technologies We Use</h3>
+                        <p class="text-gray-700 mb-6">Our team stays current with the latest mobile development technologies to deliver cutting-edge solutions.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Swift</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Kotlin</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Flutter</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">React Native</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Firebase</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">GraphQL</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">AWS Amplify</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">SwiftUI</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="flex justify-center">
+                            <div class="mobile-mockup">
+                                <div class="mobile-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                                    <div class="text-center p-6 text-white">
+                                        <i class="fas fa-mobile-alt text-5xl mb-4"></i>
+                                        <h3 class="text-xl font-bold mb-2">Your App Here</h3>
+                                        <p class="text-sm">We'll build your custom mobile solution</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold">OUR WORK</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Featured Mobile Apps</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore some of our successful mobile application projects across various industries.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- App 1 -->
+                <div class="app-card bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <div class="mobile-mockup scale-75">
+                            <div class="mobile-screen">
+                                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Fitness App" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">FitTrack Pro</h3>
+                        <p class="text-gray-600 text-sm mb-4">Fitness tracking application with AI-powered workout recommendations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">iOS</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HealthKit</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SwiftUI</span>
+                        </div>
+                    </div>
+                    <div class="app-overlay absolute inset-0 bg-blue-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">FitTrack Pro</h3>
+                        <p class="text-sm mb-4">Comprehensive fitness app with personalized workout plans, nutrition tracking, and health data integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Swift</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">HealthKit</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- App 2 -->
+                <div class="app-card bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <div class="mobile-mockup scale-75">
+                            <div class="mobile-screen">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Finance App" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">WealthPath</h3>
+                        <p class="text-gray-600 text-sm mb-4">Personal finance management tool with investment tracking.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Android</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Kotlin</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Plaid API</span>
+                        </div>
+                    </div>
+                    <div class="app-overlay absolute inset-0 bg-green-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">WealthPath</h3>
+                        <p class="text-sm mb-4">Secure financial app with bank integration, budgeting tools, and investment portfolio analysis.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Kotlin</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Jetpack Compose</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Plaid API</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- App 3 -->
+                <div class="app-card bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <div class="mobile-mockup scale-75">
+                            <div class="mobile-screen">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Social App" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Connectly</h3>
+                        <p class="text-gray-600 text-sm mb-4">Social networking platform for professionals.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Firebase</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Cross-platform</span>
+                        </div>
+                    </div>
+                    <div class="app-overlay absolute inset-0 bg-purple-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Connectly</h3>
+                        <p class="text-sm mb-4">Professional networking app with real-time messaging, event management, and content sharing.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Firebase</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Dart</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- App 4 -->
+                <div class="app-card bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                        <div class="mobile-mockup scale-75">
+                            <div class="mobile-screen">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="E-learning App" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Learnify</h3>
+                        <p class="text-gray-600 text-sm mb-4">Interactive language learning platform.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">React Native</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">AWS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Cross-platform</span>
+                        </div>
+                    </div>
+                    <div class="app-overlay absolute inset-0 bg-yellow-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Learnify</h3>
+                        <p class="text-sm mb-4">Language learning app with speech recognition, gamified lessons, and progress tracking.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">React Native</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">AWS Amplify</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">GraphQL</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- App 5 -->
+                <div class="app-card bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <div class="h-64 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <div class="mobile-mockup scale-75">
+                            <div class="mobile-screen">
+                                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                     alt="Healthcare App" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">MediTrack</h3>
+                        <p class="text-gray-600 text-sm mb-4">Healthcare management and telemedicine platform.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">iOS</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Android</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">HIPAA</span>
+                        </div>
+                    </div>
+                    <div class="app-overlay absolute inset-0 bg-red-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">MediTrack</h3>
+                        <p class="text-sm mb-4">Secure healthcare app with appointment scheduling, medication reminders, and HIPAA-compliant video consultations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Swift</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Kotlin</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Twilio</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- App 6 -->
+                <div class="app-card bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <div class="h-64 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <div class="mobile-mockup scale-75">
+                            <div class="mobile-screen">
+                                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" 
+                                     alt="E-commerce App" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ShopEasy</h3>
+                        <p class="text-gray-600 text-sm mb-4">Mobile commerce platform with AR product preview.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">AR Core</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Stripe</span>
+                        </div>
+                    </div>
+                    <div class="app-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">ShopEasy</h3>
+                        <p class="text-sm mb-4">E-commerce app with augmented reality product visualization, one-click checkout, and personalized recommendations.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">AR Core</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Apps
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold">OUR PROCESS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Mobile App Development Workflow</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A structured approach that ensures quality and efficiency in every mobile project.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Discovery & Strategy</h3>
+                    <p class="text-gray-600 text-sm">We analyze your requirements, target audience, and business objectives to create a strategic roadmap.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">UI/UX Design</h3>
+                    <p class="text-gray-600 text-sm">Our designers create intuitive interfaces and seamless user experiences tailored to mobile platforms.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Development</h3>
+                    <p class="text-gray-600 text-sm">Our developers implement the designs using modern frameworks with clean, maintainable code.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Testing & Launch</h3>
+                    <p class="text-gray-600 text-sm">Rigorous testing across devices before App Store and Play Store deployment with ongoing support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold">CLIENT FEEDBACK</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from businesses that have transformed their mobile presence with our apps.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">CEO, FitLife</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The FitTrack Pro app developed by Nexus Digital has transformed our member engagement. The app's performance is flawless, and our users love the intuitive interface."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">CTO, WealthPath</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Nexus Digital delivered our financial app ahead of schedule with exceptional quality. Their attention to security and compliance was particularly impressive."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Marketing Director, ShopEasy</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Our AR shopping app has driven a 40% increase in conversions. Nexus Digital's innovative approach to mobile commerce has given us a competitive edge."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your Mobile App?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Let's discuss your mobile app idea and how we can help bring it to life on iOS and Android platforms.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300">
+                    Get a Free Consultation
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-8 rounded-full transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Nexus<span class="text-blue-400">Digital</span></h3>
+                    <p class="text-gray-400 mb-4">Transforming ideas into digital experiences that drive business growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">iOS App Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Android App Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cross-Platform Apps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">App Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94025</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>hello@nexusdigital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Nexus Digital. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

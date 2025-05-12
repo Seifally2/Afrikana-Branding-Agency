@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floridi Tanzania Safari Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafb;
+        }
+        
+        .agency-gradient {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 200px);
+            gap: 1rem;
+        }
+        
+        .gallery-item-1 {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+        
+        .gallery-item-2 {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+        
+        .gallery-item-3 {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+        
+        .gallery-item-4 {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+        
+        .gallery-item-5 {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 5rem;
+            position: absolute;
+            left: -2rem;
+            top: -2rem;
+            color: rgba(16, 185, 129, 0.1);
+            font-family: serif;
+            z-index: 0;
+        }
+        
+        .stats-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        
+        @media (max-width: 768px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            
+            .gallery-item-1,
+            .gallery-item-2,
+            .gallery-item-3,
+            .gallery-item-4,
+            .gallery-item-5 {
+                grid-column: span 1;
+                grid-row: span 1;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800">Branding Agency</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="Services.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="About Us.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="Contact Us.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="Booking Form.html" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Project Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 mb-4">Tourism Company</span>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">floridi tanzania safari expert Website design</h1>
+                    <p class="text-lg text-gray-600 mb-8">Design a website into a premium  showcase that increased direct bookings by 70%</p>
+                    <a href="https://www.floriditanzaniasafariexpert.com" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700">
+                        Visit Live Website
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-6 -left-6 w-full h-full bg-green-100 rounded-xl z-0"></div>
+                        <div class="relative z-10 rounded-xl overflow-hidden shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Serengeti Luxury Camps Website" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Project Overview</h2>
+                    <p class="text-gray-600 mb-6">Floridi Tanzania Safari Experts is a local tour company based in Arusha delivering specialized and quality tour packages all over Tanzania. We provide wildlife safaris, Kilimanjaro climbs, Zanzibar beach holidays and cultural tours. We have well experienced and professional guides with extensive knowledge in popular tourist destinations. It’s in our best interest to provide you with the means of exploring what nature has to offer. Above all, we customize tailor made tours to suit your interests as well as your budget.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">The Challenge</h3>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+                            <span>Outdated design that didn't reflect the luxury experience</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+                            <span>Poor mobile experience with high bounce rates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+                            <span>No integrated booking system, relying on phone/email</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-2"></i>
+                            <span>Low visibility for key search terms like "luxury safari Tanzania"</span>
+                        </li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Solution</h3>
+                    <p class="text-gray-600 mb-6">We created a complete digital transformation that positioned Serengeti Luxury Camps as the premier safari operator in Tanzania. Our approach combined stunning visual design with strategic functionality to drive conversions.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <p class="text-2xl font-bold text-green-600">187%</p>
+                                <p class="text-sm text-gray-500">Increase in direct bookings</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-green-600">42%</p>
+                                <p class="text-sm text-gray-500">Reduction in bounce rate</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-green-600">#1</p>
+                                <p class="text-sm text-gray-500">Google ranking for key terms</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-green-600">3.2x</p>
+                                <p class="text-sm text-gray-500">More time spent on site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl h-fit sticky top-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Project Details</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Client</p>
+                            <p class="text-gray-900">Floridi Tanzania Safari Expert</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Industry</p>
+                            <p class="text-gray-900">Tourism</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Services</p>
+                            <p class="text-gray-900">Website Design, Development, SEO, Booking System Integration</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Technologies</p>
+                            <p class="text-gray-900">WordPress, WooCommerce, React, GSAP, Google Maps API</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Project Duration</p>
+                            <p class="text-gray-900">3 weeks</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-500">Launch Date</p>
+                            <p class="text-gray-900">March 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Project Gallery</h2>
+            
+            <div class="project-gallery mb-12">
+                <div class="gallery-item-1">
+                    <img src="images/image 2 Floridi.png" alt="Homepage" class="gallery-img">
+                </div>
+                <div class="gallery-item-2">
+                    <img src="images/image 1.png" alt="Accommodations" class="gallery-img">
+                </div>
+                <div class="gallery-item-3">
+                    <img src="https://floriditanzaniasafariexpert.com/wp-content/uploads/2025/01/DALL%C2%B7E-2025-01-11-14.16.41-A-detailed-map-of-Kilimanjaro-National-Park-highlighting-key-routes-for-trekking-such-as-the-Machame-Marangu-and-Lemosho-routes-along-with-notable.webp" alt="Booking Process" class="gallery-img">
+                </div>
+                <div class="gallery-item-4">
+                    <img src="images/image 1.png" alt="Mobile View" class="gallery-img">
+                </div>
+                <div class="gallery-item-5">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Safari Packages" class="gallery-img">
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button id="viewMoreBtn" class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    View More Screenshots
+                    <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Key Features</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-check text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Real-time Booking System</h3>
+                    <p class="text-gray-600">Integrated booking engine with live availability, instant confirmation, and secure payment processing to reduce reliance on third-party platforms.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-vr-cardboard text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">360° Virtual Tours</h3>
+                    <p class="text-gray-600">Immersive virtual tours of luxury tents and common areas to give potential guests a realistic preview of the experience.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-map-marked-alt text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Interactive Safari Map</h3>
+                    <p class="text-gray-600">Custom Google Maps integration showing camp locations, migration routes, and points of interest to help guests plan their safari.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Mobile-first Design</h3>
+                    <p class="text-gray-600">Fully responsive design optimized for mobile users who often research and book travel on their smartphones.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-search text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">SEO Optimization</h3>
+                    <p class="text-gray-600">Comprehensive SEO strategy targeting high-intent keywords to attract qualified traffic searching for luxury safaris.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tachometer-alt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Performance Focus</h3>
+                    <p class="text-gray-600">Lightning-fast load times optimized for global visitors, even in remote locations with slower internet connections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-xl relative testimonial-quote">
+                <div class="flex flex-col md:flex-row items-center">
+                    <img src="https://floriditanzaniasafariexpert.com/wp-content/uploads/2025/01/logo-1.png" alt="Client" class="w-24 h-24 rounded-full mr-0 md:mr-8 mb-6 md:mb-0">
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-2">Floridi Laisser</h4>
+                        <p class="text-green-400 mb-4">Managing Director, Floridi Tanzania Safari Expert</p>
+                        <p class="text-gray-300 relative z-10 text-lg">Your Digital Agency completely transformed our online presence. The new website perfectly captures the luxury and adventure of our safari experiences. Within three weeks of launch, direct bookings increased by 70% and our customer satisfaction scores improved dramatically. The team's attention to detail and understanding of our brand was exceptional.</p>
+                        <div class="mt-6 flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Measurable Results</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Analytics Dashboard" class="rounded-xl shadow-xl w-full">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Business Impact</h3>
+                    <p class="text-gray-600 mb-6">The redesigned website delivered significant business results for Serengeti Luxury Camps, transforming their digital presence into a powerful sales and marketing tool.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-100 rounded-full p-2 mr-4">
+                                <i class="fas fa-chart-line text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">70% Increase in Direct Bookings</h4>
+                                <p class="text-gray-600">Reduced dependency on third-party platforms and increased profit margins.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-blue-100 rounded-full p-2 mr-4">
+                                <i class="fas fa-search text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900"> Google Ranking for Key Terms</h4>
+                                <p class="text-gray-600">Top positions for "Tour safari Tanzania" and related high-value keywords.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-purple-100 rounded-full p-2 mr-4">
+                                <i class="fas fa-mobile-alt text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">42% Reduction in Bounce Rate</h4>
+                                <p class="text-gray-600">Improved engagement across all devices, especially mobile.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-yellow-100 rounded-full p-2 mr-4">
+                                <i class="fas fa-clock text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">3.2x More Time Spent on Site</h4>
+                                <p class="text-gray-600">Visitors engaged more deeply with content and explored multiple pages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready for Your Website Transformation?</h2>
+            <p class="text-xl mb-8">Let's discuss how we can create a website that elevates your brand and drives business growth.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="Booking Form.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-100">
+                    Get a  Consultation
+                    <i class="fas fa-phone-alt ml-2"></i>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+         <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Afrikana<span class="text-indigo-400"> Branding Agency</span></h3>
+                    <p class="text-gray-400 mb-4">Transforming ideas into digital experiences that drive business growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="Web Design.html" class="text-gray-400 hover:text-white">Web Development</a></li>
+                        <li><a href="Mobile app.html" class="text-gray-400 hover:text-white">Mobile App Development</a></li>
+                        <li><a href="UI UX.html" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
+                        <li><a href="Content Creation.html" class="text-gray-400 hover:text-white">Digital Marketing</a></li>
+                        <li><a href="Seo Services.html" class="text-gray-400 hover:text-white">SEO Services</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="About Us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="Team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="Services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="Blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="Contact Us.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <!-- Form with FormSubmit action -->
+                    <form action="https://formsubmit.co/allyseif303@gmail.com" method="POST" class="flex">
+                        <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" required>
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Afrikana Branding Agency. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

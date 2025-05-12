@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Web Development | Nexus Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .portfolio-overlay {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        .tech-badge {
+            transition: all 0.3s ease;
+        }
+        .tech-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800">Branding Agency</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Services</a>
+                    <a href="portfolio.html" class="text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                    <a href="about.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                    <a href="contact.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Custom Web Development</h1>
+                    <p class="text-xl mb-8 text-indigo-100 max-w-lg">Bespoke web solutions tailored to your business needs, built with cutting-edge technologies.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Get a Quote
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" 
+                         alt="Web Development" class="rounded-xl shadow-2xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">OUR APPROACH</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Tailored Web Solutions</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">We don't believe in one-size-fits-all solutions. Every website we build is custom-crafted to meet your specific business objectives, target audience, and industry requirements.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Strategic Planning</h3>
+                    <p class="text-gray-600">We begin with in-depth discovery sessions to understand your business goals, target audience, and competitive landscape.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-pencil-ruler text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Design</h3>
+                    <p class="text-gray-600">Our designers create unique interfaces that reflect your brand while optimizing for user experience and conversions.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modern Development</h3>
+                    <p class="text-gray-600">We build with the latest frameworks and technologies to ensure performance, security, and scalability.</p>
+                </div>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-4">Technologies We Work With</h3>
+                        <p class="text-gray-700 mb-6">Our team is proficient in a wide range of modern web technologies to deliver the best solution for your project.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">React</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Vue.js</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Next.js</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Node.js</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Laravel</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">WordPress</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Shopify</span>
+                            <span class="tech-badge bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">GraphQL</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                             alt="Web Technologies" class="rounded-xl shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">OUR WORK</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Recent Web Development Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore some of our custom web development projects across various industries.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" 
+                         alt="E-commerce Platform" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Global E-commerce Platform</h3>
+                        <p class="text-sm mb-4">Custom-built e-commerce solution with multi-currency support and advanced inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Healthcare Portal" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Healthcare Patient Portal</h3>
+                        <p class="text-sm mb-4">Secure patient portal with appointment scheduling, telehealth integration, and medical records access.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Vue.js</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Laravel</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">HIPAA Compliant</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="SaaS Dashboard" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Analytics SaaS Dashboard</h3>
+                        <p class="text-sm mb-4">Custom analytics platform with real-time data visualization and customizable reporting.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">D3.js</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Education Platform" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Online Learning Platform</h3>
+                        <p class="text-sm mb-4">Interactive e-learning platform with course management, progress tracking, and certification.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Next.js</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Stripe</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Corporate Website" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Corporate Website Redesign</h3>
+                        <p class="text-sm mb-4">Complete redesign of corporate website with improved UX and content management system.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">WordPress</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Custom Theme</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">SEO Optimized</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Mobile Web App" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-indigo-600 bg-opacity-90 flex flex-col justify-center p-8 text-white">
+                        <h3 class="text-xl font-bold mb-2">Progressive Web Application</h3>
+                        <p class="text-sm mb-4">Cross-platform PWA with offline functionality and push notifications.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">PWA</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-white bg-opacity-20 text-xs px-3 py-1 rounded-full">Service Workers</span>
+                        </div>
+                        <a href="#" class="text-white font-medium text-sm inline-flex items-center mt-auto">
+                            View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">OUR PROCESS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Web Development Workflow</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A structured approach that ensures quality and efficiency in every project.</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="hidden md:block absolute left-1/2 h-full w-1 bg-indigo-100 transform -translate-x-1/2"></div>
+                
+                <!-- Process Steps -->
+                <div class="space-y-16 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 text-right">
+                            <h3 class="text-xl font-bold mb-3">Discovery & Planning</h3>
+                            <p class="text-gray-600">We start with in-depth discussions to understand your business goals, target audience, and technical requirements.</p>
+                        </div>
+                        <div class="absolute hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 text-white left-1/2 transform -translate-x-1/2">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Business requirements analysis</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Technical feasibility assessment</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Project roadmap creation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 order-1 md:order-none text-right">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Wireframing & prototyping</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>UI/UX design mockups</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Brand consistency review</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 text-white left-1/2 transform -translate-x-1/2">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 order-0 md:order-none">
+                            <h3 class="text-xl font-bold mb-3">Design & Prototyping</h3>
+                            <p class="text-gray-600">Our designers create wireframes and high-fidelity mockups to visualize the user experience before development begins.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 text-right">
+                            <h3 class="text-xl font-bold mb-3">Development</h3>
+                            <p class="text-gray-600">Our developers implement the approved designs using modern frameworks and best coding practices.</p>
+                        </div>
+                        <div class="absolute hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 text-white left-1/2 transform -translate-x-1/2">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Agile development sprints</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Regular client demos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Quality assurance testing</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-16 mb-8 md:mb-0 order-1 md:order-none text-right">
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Performance optimization</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>Security hardening</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                        <span>SEO implementation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 text-white left-1/2 transform -translate-x-1/2">
+                            <span class="font-bold">4</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-16 order-0 md:order-none">
+                            <h3 class="text-xl font-bold mb-3">Launch & Optimization</h3>
+                            <p class="text-gray-600">We deploy your website after thorough testing and provide ongoing support and optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your Custom Website?</h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Let's discuss your project and how we can help bring your vision to life.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300">
+                    Get a Free Consultation
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-bold py-3 px-8 rounded-full transition duration-300">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Nexus<span class="text-indigo-400">Digital</span></h3>
+                    <p class="text-gray-400 mb-4">Transforming ideas into digital experiences that drive business growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">E-commerce Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Web Application Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">CMS Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Website Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Nexus Digital. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

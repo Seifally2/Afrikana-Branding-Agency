@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design Services | Nexus Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#1e293b',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+        
+        .design-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 24px;
+            width: 2px;
+            height: 100%;
+            background: #e2e8f0;
+            z-index: 1;
+        }
+        
+        .process-step:last-child::before {
+            display: none;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .tooltip-text {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            width: max-content;
+            max-width: 200px;
+        }
+        
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #1e293b transparent transparent transparent;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary">Nexus<span class="text-secondary">Digital</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-dark hover:text-primary px-3 py-2 font-medium">Home</a>
+                        <a href="services.html" class="nav-link text-dark hover:text-primary px-3 py-2 font-medium">Services</a>
+                        <a href="portfolio.html" class="nav-link text-dark hover:text-primary px-3 py-2 font-medium">Work</a>
+                        <a href="about.html" class="nav-link text-dark hover:text-primary px-3 py-2 font-medium">About</a>
+                        <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition duration-300 font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-dark hover:text-primary focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">Work</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:text-primary hover:bg-gray-50">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-secondary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Exceptional <span class="text-primary">UI/UX Design</span> Services</h1>
+                <p class="text-lg text-gray-600 mb-8">We craft intuitive, beautiful digital experiences that engage users and drive conversions. Our human-centered approach ensures your product not only looks stunning but delivers real business results.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition duration-300 font-medium text-center">Get a Free Consultation</a>
+                    <a href="#portfolio" class="border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 font-medium text-center">See Our Work</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="UI/UX Design" class="rounded-xl shadow-2xl w-full">
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+                    <div class="flex items-center">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-3">
+                            <i class="fas fa-medal text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Award Winning</p>
+                            <p class="text-sm text-gray-600">Best UX Design 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">OUR EXPERTISE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Comprehensive UI/UX Solutions</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">We provide end-to-end design services to create seamless digital experiences across all platforms and devices.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="design-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-screen text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile App Design</h3>
+                    <p class="text-gray-600 mb-4">Intuitive mobile interfaces with seamless navigation patterns tailored to your target audience's needs and behaviors.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> iOS & Android UI/UX</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Prototyping & Testing</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Design Systems</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="design-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Design</h3>
+                    <p class="text-gray-600 mb-4">Responsive websites that combine aesthetic appeal with optimal user flows and conversion-focused design.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Responsive Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> E-commerce UX</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Landing Page Optimization</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="design-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="bg-primary bg-opacity-10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">User Research</h3>
+                    <p class="text-gray-600 mb-4">Data-driven insights about your users to inform design decisions and create truly user-centered products.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> User Personas</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Journey Mapping</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Usability Testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">OUR METHODOLOGY</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">The Nexus Digital Design Process</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">A proven framework that delivers exceptional results through research, strategy, and meticulous execution.</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Process Steps -->
+                <div class="space-y-8">
+                    <!-- Step 1 -->
+                    <div class="process-step relative pl-16">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white z-10">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-3">Discover & Research</h3>
+                            <p class="text-gray-600 mb-4">We begin by understanding your business goals, target audience, and market landscape through comprehensive research.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Stakeholder Interviews</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Competitive Analysis</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">User Surveys</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="process-step relative pl-16">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white z-10">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-3">Define & Strategize</h3>
+                            <p class="text-gray-600 mb-4">We synthesize research findings to define clear user personas, journey maps, and information architecture.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">User Personas</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Journey Mapping</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Sitemaps</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="process-step relative pl-16">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white z-10">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-3">Design & Prototype</h3>
+                            <p class="text-gray-600 mb-4">We transform insights into beautiful, functional designs through wireframes, prototypes, and iterative testing.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Wireframing</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">UI Design</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Interactive Prototypes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="process-step relative pl-16">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white z-10">
+                            <span class="font-bold">4</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-3">Test & Refine</h3>
+                            <p class="text-gray-600 mb-4">We validate designs with real users through usability testing and refine based on feedback before development.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Usability Testing</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">A/B Testing</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Accessibility Review</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="process-step relative pl-16">
+                        <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white z-10">
+                            <span class="font-bold">5</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h3 class="text-xl font-bold mb-3">Implement & Support</h3>
+                            <p class="text-gray-600 mb-4">We collaborate with developers to ensure pixel-perfect implementation and provide ongoing design support.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Design Handoff</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Developer Collaboration</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Quality Assurance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">OUR WORK</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">UI/UX Design Case Studies</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Explore how we've transformed businesses through exceptional user experience design.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1636&q=80" alt="Fintech App" class="w-full h-96 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-8">
+                        <div>
+                            <h3 class="text-white text-2xl font-bold mb-2">Fintech Mobile Banking</h3>
+                            <p class="text-gray-300 mb-4">Redesigned mobile banking experience resulting in 40% increase in user engagement</p>
+                            <a href="#" class="inline-flex items-center text-white font-medium">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="E-commerce Platform" class="w-full h-96 object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-8">
+                        <div>
+                            <h3 class="text-white text-2xl font-bold mb-2">E-commerce Platform Redesign</h3>
+                            <p class="text-gray-300 mb-4">Improved checkout flow increased conversions by 28% and reduced cart abandonment</p>
+                            <a href="#" class="inline-flex items-center text-white font-medium">
+                                View Case Study <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="portfolio.html" class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition duration-300 font-medium">
+                    View All Case Studies <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Technologies -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">OUR TOOLKIT</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Design Tools We Master</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">We leverage industry-leading tools to create pixel-perfect designs and seamless user experiences.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <!-- Tool 1 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="h-12 mb-4">
+                    <span class="font-medium">Figma</span>
+                    <div class="tooltip-text">Collaborative interface design</div>
+                </div>
+                
+                <!-- Tool 2 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Adobe_XD_CC_icon.svg" alt="Adobe XD" class="h-12 mb-4">
+                    <span class="font-medium">Adobe XD</span>
+                    <div class="tooltip-text">Prototyping & wireframing</div>
+                </div>
+                
+                <!-- Tool 3 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" class="h-12 mb-4">
+                    <span class="font-medium">Photoshop</span>
+                    <div class="tooltip-text">Visual design & editing</div>
+                </div>
+                
+                <!-- Tool 4 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="h-12 mb-4">
+                    <span class="font-medium">Illustrator</span>
+                    <div class="tooltip-text">Vector graphics & icons</div>
+                </div>
+                
+                <!-- Tool 5 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_After_Effects_CC_icon.svg" alt="After Effects" class="h-12 mb-4">
+                    <span class="font-medium">After Effects</span>
+                    <div class="tooltip-text">Motion design & micro-interactions</div>
+                </div>
+                
+                <!-- Tool 6 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Adobe_InDesign_CC_icon.svg" alt="InDesign" class="h-12 mb-4">
+                    <span class="font-medium">InDesign</span>
+                    <div class="tooltip-text">Print & digital publications</div>
+                </div>
+                
+                <!-- Tool 7 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Balsamiq_Logo.png" alt="Balsamiq" class="h-12 mb-4">
+                    <span class="font-medium">Balsamiq</span>
+                    <div class="tooltip-text">Low-fidelity wireframing</div>
+                </div>
+                
+                <!-- Tool 8 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Sketch_Logo.svg" alt="Sketch" class="h-12 mb-4">
+                    <span class="font-medium">Sketch</span>
+                    <div class="tooltip-text">Interface design</div>
+                </div>
+                
+                <!-- Tool 9 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/InVision_logo.svg" alt="InVision" class="h-12 mb-4">
+                    <span class="font-medium">InVision</span>
+                    <div class="tooltip-text">Prototyping & collaboration</div>
+                </div>
+                
+                <!-- Tool 10 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Framer_Logo.png" alt="Framer" class="h-12 mb-4">
+                    <span class="font-medium">Framer</span>
+                    <div class="tooltip-text">Advanced prototyping</div>
+                </div>
+                
+                <!-- Tool 11 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Miro_%28software%29_Logo.png" alt="Miro" class="h-12 mb-4">
+                    <span class="font-medium">Miro</span>
+                    <div class="tooltip-text">Collaborative whiteboarding</div>
+                </div>
+                
+                <!-- Tool 12 -->
+                <div class="tooltip bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Zeplin_logo.svg" alt="Zeplin" class="h-12 mb-4">
+                    <span class="font-medium">Zeplin</span>
+                    <div class="tooltip-text">Design handoff & specs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">CLIENT TESTIMONIALS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">What Our Clients Say</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Don't just take our word for it - hear what our clients have to say about our UI/UX design services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"NexusDigital completely transformed our mobile app's user experience. Their attention to detail and user-centered approach resulted in a 35% increase in user retention and significantly higher customer satisfaction scores."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Product Director, Fintech Company</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Working with NexusDigital was a game-changer for our e-commerce platform. Their UX research identified critical pain points we had missed, and their redesign increased our conversion rate by 22% while reducing support tickets by 40%."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">CEO, Retail Startup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Elevate Your User Experience?</h2>
+            <p class="text-white text-opacity-90 mb-8">Let's discuss how we can create an exceptional digital experience for your users that drives real business results.</p>
+            <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-primary rounded-full hover:bg-gray-100 transition duration-300 font-bold text-lg">
+                Start Your Project Today <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold">HAVE QUESTIONS?</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Frequently Asked Questions</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Find answers to common questions about our UI/UX design services.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">What's the difference between UI and UX design?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">UI (User Interface) design focuses on the visual elements of a product - the look and feel, the presentation, and the interactivity of a product. UX (User Experience) design focuses on the overall experience of the user, including usability, accessibility, and the efficiency in accomplishing tasks. While UI is about how the product looks, UX is about how it works and feels.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">How long does a typical UI/UX design project take?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">The timeline varies depending on project complexity, but most UI/UX projects follow this general timeline: Discovery & Research (1-3 weeks), Information Architecture (1-2 weeks), Wireframing (2-3 weeks), UI Design (3-5 weeks), Prototyping & Testing (2-3 weeks). A complete redesign typically takes 8-16 weeks from start to finish.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">What deliverables will I receive?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">Our standard deliverables include: User research reports, Personas & user journeys, Information architecture & sitemaps, Wireframes & prototypes, High-fidelity UI designs, Design systems & style guides, Interactive prototypes, Usability testing reports, and Developer handoff documentation. We tailor deliverables to each project's specific needs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">How do you measure the success of a UX design?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">We measure UX success through both qualitative and quantitative metrics including: Task completion rates, Time on task, Error rates, User satisfaction scores (SUS, NPS), Conversion rates, Retention rates, Support ticket reduction, and Engagement metrics. We establish benchmarks before redesign and measure improvements post-launch.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-semibold">Do you offer ongoing design support after launch?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden">
+                        <p class="text-gray-600">Yes, we offer several post-launch support options: Design maintenance packages, UX analytics review sessions, Quarterly UX audits, A/B testing support, Feature enhancement design, and Design system updates. Many clients choose to retain us for ongoing optimization as user needs and technologies evolve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Create Something Amazing Together</h2>
+            <p class="text-gray-600 mb-8">Have a project in mind or want to learn more about our UI/UX design services? Get in touch with our team.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="tel:+15551234567" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition duration-300 font-medium inline-flex items-center justify-center">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Us
+                </a>
+                <a href="mailto:hello@nexusdigital.com" class="border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition duration-300 font-medium inline-flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Nexus<span class="text-primary">Digital</span></h3>
+                    <p class="text-gray-400 mb-4">Creating exceptional digital experiences that engage users and drive business growth.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">UI/UX Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mobile App Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">User Research</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Prototyping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Design Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Design Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">UX Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Free UI Kits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 NexusDigital. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle content visibility
+                content.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+                
+                // Close other open FAQs
+                document.querySelectorAll('.faq-toggle').forEach(otherButton => {
+                    if (otherButton !== this) {
+                        const otherContent = otherButton.nextElementSibling;
+                        const otherIcon = otherButton.querySelector('i');
+                        
+                        otherContent.classList.add('hidden');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        });
+
+        // Scroll animation for nav
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const nav = document.querySelector('nav');
+            
+            if (scrollPosition > 100) {
+                nav.classList.add('shadow-lg');
+                nav.classList.add('bg-opacity-90');
+                nav.classList.add('backdrop-blur-sm');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.remove('bg-opacity-90');
+                nav.classList.remove('backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

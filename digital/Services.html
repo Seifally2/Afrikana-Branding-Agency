@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Creative Digital Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .process-step:hover .step-icon {
+            transform: rotateY(180deg);
+            background: #667eea;
+            color: white;
+        }
+        .step-icon {
+            transition: all 0.5s ease;
+        }
+        .tab-active {
+            background: #667eea;
+            color: white;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+<!-- Navigation -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-indigo-600">Afrikana<span class="text-gray-800"> Branding Agency</span></a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Home</a>
+                <a href="About Us.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">About</a>
+                <a href="Services.html" class="text-indigo-600 px-3 py-2 font-medium">Services</a>
+                <a href="portfolio.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Portfolio</a>
+                <a href="Contact Us.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Contact</a>
+                <a href="Blog.html" class="text-gray-800 hover:text-indigo-600 px-3 py-2 font-medium">Blog</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="Booking Form.html" class="gradient-bg text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition duration-300">Booking</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+            <div class="md:hidden">
+                <button class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Our Digital Services</h1>
+                    <p class="text-xl mb-8 text-indigo-100 max-w-lg">Comprehensive solutions designed to elevate your brand in the digital landscape.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Get Started
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            View Pricing
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Digital Services" class="rounded-xl shadow-2xl animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Tabs -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">OUR EXPERTISE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Tailored Digital Solutions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer specialized services to meet your unique business needs and goals.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center mb-12 gap-2">
+                <button onclick="changeTab('development')" class="tab-button px-6 py-3 rounded-full font-medium border border-gray-200 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300 tab-active">
+                    Development
+                </button>
+                <button onclick="changeTab('design')" class="tab-button px-6 py-3 rounded-full font-medium border border-gray-200 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300">
+                    Design
+                </button>
+                <button onclick="changeTab('marketing')" class="tab-button px-6 py-3 rounded-full font-medium border border-gray-200 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300">
+                    Marketing
+                </button>
+                <button onclick="changeTab('strategy')" class="tab-button px-6 py-3 rounded-full font-medium border border-gray-200 hover:bg-indigo-100 hover:text-indigo-600 transition duration-300">
+                    Strategy
+                </button>
+            </div>
+            
+            <!-- Development Tab Content -->
+            <div id="development" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-globe text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Custom Web Development</h3>
+                        <p class="text-gray-600 mb-4">Bespoke websites built with modern frameworks like React, Vue, and Laravel for optimal performance and scalability.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Responsive</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">CMS Integration</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">API Development</span>
+                        </div>
+                        <a href="Web Design.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
+                        <p class="text-gray-600 mb-4">Native and cross-platform mobile applications for iOS and Android with Flutter and React Native.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">iOS</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Android</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Hybrid Apps</span>
+                        </div>
+                        <a href="Mobile app.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shopping-cart text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">E-commerce Solutions</h3>
+                        <p class="text-gray-600 mb-4">Complete online store setups with Shopify, WooCommerce, or custom platforms with payment gateways.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Shopify</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">WooCommerce</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Custom</span>
+                        </div>
+                        <a href="Web Design.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Design Tab Content -->
+            <div id="design" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-paint-brush text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                        <p class="text-gray-600 mb-4">User-centered interface designs that enhance usability and create engaging digital experiences.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Wireframing</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Prototyping</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">User Testing</span>
+                        </div>
+                        <a href="UI UX.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-palette text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Brand Identity</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive branding solutions including logo design, color schemes, and visual identity systems.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Logo Design</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Style Guides</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Brand Assets</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-photo-film text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Motion Graphics</h3>
+                        <p class="text-gray-600 mb-4">Animated content and video production to bring your brand story to life.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">2D Animation</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Explainer Videos</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Social Media</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marketing Tab Content -->
+            <div id="marketing" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">SEO Services</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive search engine optimization to improve your visibility and organic traffic.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Keyword Research</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">On-Page SEO</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Technical SEO</span>
+                        </div>
+                        <a href="Seo Services.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-ad text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">PPC Advertising</h3>
+                        <p class="text-gray-600 mb-4">Targeted pay-per-click campaigns on Google, Facebook, and LinkedIn to drive qualified leads.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Google Ads</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Social Ads</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Retargeting</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-envelope-open-text text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Email Marketing</h3>
+                        <p class="text-gray-600 mb-4">Automated email campaigns that nurture leads and drive customer engagement.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Automation</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Newsletters</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Drip Campaigns</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Strategy Tab Content -->
+            <div id="strategy" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-chess text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Digital Strategy</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive digital roadmaps aligned with your business objectives and KPIs.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">SWOT Analysis</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Competitive Audit</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Roadmapping</span>
+                        </div>
+                        <a href="Content Creation.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-users text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Content Strategy</h3>
+                        <p class="text-gray-600 mb-4">Data-driven content plans that engage your audience and drive conversions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Audience Research</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Content Calendar</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Performance Tracking</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card bg-white p-8 rounded-xl border border-gray-100">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-lightbulb text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Innovation Consulting</h3>
+                        <p class="text-gray-600 mb-4">Expert guidance on emerging technologies and digital transformation strategies.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Tech Scouting</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Digital Maturity</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Transformation</span>
+                        </div>
+                        <a href="Booking Form.html" class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">OUR PROCESS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">How We Work</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A structured approach that ensures quality and efficiency in every project.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6 text-indigo-600 text-2xl">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Discovery</h3>
+                    <p class="text-gray-600">We analyze your business goals, target audience, and competition to create a strategic foundation.</p>
+                    <span class="mt-4 inline-block text-indigo-600 font-bold">01</span>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6 text-indigo-600 text-2xl">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design</h3>
+                    <p class="text-gray-600">Wireframing and prototyping to visualize the user experience before development begins.</p>
+                    <span class="mt-4 inline-block text-indigo-600 font-bold">02</span>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6 text-indigo-600 text-2xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Development</h3>
+                    <p class="text-gray-600">Agile development process with regular iterations and client feedback sessions.</p>
+                    <span class="mt-4 inline-block text-indigo-600 font-bold">03</span>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step text-center">
+                    <div class="step-icon w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6 text-indigo-600 text-2xl">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Launch</h3>
+                    <p class="text-gray-600">Thorough testing and optimization before deployment with ongoing support.</p>
+                    <span class="mt-4 inline-block text-indigo-600 font-bold">04</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">PRICING</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Flexible Pricing Plans</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose the package that fits your business needs and budget.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white border border-gray-200 rounded-xl p-8 hover:border-indigo-500 transition duration-300">
+                    <h3 class="text-xl font-bold mb-4">Starter</h3>
+                    <p class="text-gray-600 mb-6">Perfect for small businesses and startups</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$1,499</span>
+                        <span class="text-gray-600">/project</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>5 Page Website</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Mobile Responsive</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic SEO Setup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Contact Form</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-2"></i>
+                            <span>No E-commerce</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Popular Plan -->
+                <div class="bg-white border-2 border-indigo-600 rounded-xl p-8 relative">
+                    <div class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        POPULAR
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Business</h3>
+                    <p class="text-gray-600 mb-6">Ideal for growing businesses</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$3,999</span>
+                        <span class="text-gray-600">/project</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>15 Page Website</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced Mobile Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>SEO Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>CMS Integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic E-commerce</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="bg-white border border-gray-200 rounded-xl p-8 hover:border-indigo-500 transition duration-300">
+                    <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">For large scale projects</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$8,999+</span>
+                        <span class="text-gray-600">/project</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom Web Application</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced E-commerce</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Dedicated Team</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>API Development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Ongoing Support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">Need something custom? We offer tailored solutions.</p>
+                <button class="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center justify-center mx-auto">
+                    Request a Custom Quote <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our services and process.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-300">
+                        <span class="text-lg font-medium">What's included in your web development service?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Our web development service includes custom design, responsive development, content management system setup (if required), basic SEO configuration, contact form integration, and one round of revisions. Additional features like e-commerce, custom animations, or advanced functionality would be quoted separately.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-300">
+                        <span class="text-lg font-medium">How long does a typical project take?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Project timelines vary based on scope and complexity. A basic website typically takes 4-6 weeks from kickoff to launch. More complex projects like custom web applications or e-commerce sites can take 8-12 weeks or longer. We provide a detailed timeline during our discovery phase after understanding all project requirements.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-300">
+                        <span class="text-lg font-medium">Do you offer ongoing support after launch?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Yes, we offer several ongoing support options. All projects include 30 days of post-launch support for minor fixes. After that, we offer monthly maintenance plans that include updates, security patches, backups, and a set number of support hours. We can customize a support package based on your specific needs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-300">
+                        <span class="text-lg font-medium">What platforms do you work with?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">We're platform agnostic and work with the best technology for each project. For CMS websites, we commonly use WordPress, Shopify, and custom solutions. For web applications, we work with React, Vue, Laravel, and Node.js. For mobile apps, we use Flutter, React Native, and native iOS/Android development. We'll recommend the best stack for your specific needs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition duration-300">
+                        <span class="text-lg font-medium">How do you handle project communication?</span>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Communication is key to project success. We use Slack for quick questions, email for formal communication, and Zoom for meetings. Each project has a dedicated project manager who serves as your single point of contact. We provide weekly progress reports and schedule regular check-in meetings based on the project phase and your preferences.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">Still have questions? We're happy to help.</p>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Contact Our Team
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-indigo-600 rounded-2xl p-12 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+                <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Let's discuss how we can help your business grow in the digital world.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300">
+                        Get a Free Consultation
+                    </button>
+                    <button class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-bold py-3 px-8 rounded-full transition duration-300">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Column 1 -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Afrikana <span class="text-indigo-400">Branding Agency</span></h3>
+                <p class="text-gray-400 mb-4">Transforming ideas into digital experiences that drive business growth.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="Web Design.html" class="text-gray-400 hover:text-white">Web Development</a></li>
+                    <li><a href="Mobile app.html" class="text-gray-400 hover:text-white">Mobile App Development</a></li>
+                    <li><a href="UI UX.html" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
+                    <li><a href="Content Creation.html" class="text-gray-400 hover:text-white">Digital Marketing</a></li>
+                    <li><a href="Seo Services.html" class="text-gray-400 hover:text-white">SEO Services</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3 -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="About Us.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                    <li><a href="Team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+                    <li><a href="Services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                    <li><a href="Blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                    <li><a href="Contact Us.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4 -->
+            <div>
+                <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+                <!-- Form with FormSubmit action -->
+                <form action="https://formsubmit.co/allyseif303@gmail.com" method="POST" class="flex">
+                    <input type="email" name="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full" required>
+                    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-r-lg">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Afrikana Branding Agency. All rights reserved. | <a href="#" class="hover:text-white">Privacy Policy</a> | <a href="#" class="hover:text-white">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Tab functionality
+        function changeTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            // Add active class to clicked tab button
+            event.target.classList.add('tab-active');
+        }
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
